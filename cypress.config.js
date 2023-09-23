@@ -1,11 +1,11 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  reporter: 'cypress-mochawesome-reporter',
+  //reporter: 'cypress-mochawesome-reporter',
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
-      require('cypress-mochawesome-reporter/plugin')(on);
+     // require('cypress-mochawesome-reporter/plugin')(on);
     },
   },
   "chromeWebSecurity": false,
@@ -15,15 +15,15 @@ module.exports = defineConfig({
   "requestTimeout": 200000,
   "responseTimeout": 150000,
 
-  "reporter": "mochawesome",
-  "reporterOptions": {
-    "reportDir": "cypress/reports",
-    "reportFilename": "report",
-    "overwrite": false,
-    "html": true,
-    "json": true,
-    "charts": true
-  },
+  // "reporter": "mochawesome",
+  // "reporterOptions": {
+  //   "reportDir": "cypress/reports",
+  //   "reportFilename": "report",
+  //   "overwrite": false,
+  //   "html": true,
+  //   "json": true,
+  //   "charts": true
+  // },
   
 
   "video": false,
